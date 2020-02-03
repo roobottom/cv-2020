@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "11ty": "npx @11ty/eleventy --serve",
+    "gulp": "npx gulp",
+    "dev": "concurrently --kill-others \"npm run 11ty\" \"npm run gulp\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "@11ty/eleventy": "^0.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
   }
 }
