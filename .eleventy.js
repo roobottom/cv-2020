@@ -1,4 +1,7 @@
 module.exports = function (config) {
+  
+  config.addPassthroughCopy("_source/assets")
+
   return {
     dir: {
       input: "_source",
@@ -10,4 +13,5 @@ module.exports = function (config) {
       templateFormats: ["html", "njk"]
     }
   }
+  
 }
