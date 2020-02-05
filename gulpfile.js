@@ -1,13 +1,13 @@
 const { src, dest, watch, series } = require('gulp')
-const sass = require('gulp-sass')
+const less = require('gulp-less')
 
 const compile_css = () => {
-  return src('./_source/_sass/styles.scss')
-    .pipe(sass())
+  return src('./_source/_less/styles.less')
+    .pipe(less())
     .pipe(dest('./_site/assets'))
 }
 exports.default = (callback) => {
-  watch('./_source/_sass/**/*.scss', { ignoreInitial: false }, compile_css)
+  watch('./_source/_less/**/*.less', { ignoreInitial: false }, compile_css)
   callback()
 }
 exports.build = series(compile_css)
