@@ -30,8 +30,12 @@
             font-size: unit(16/@base,rem);
             line-height: 24 / 16;
             .break-min({
-                font-size: unit(19/@base,rem);
-                line-height: 34 / 19;
+              font-size: unit(19/@base,rem);
+              line-height: 34 / 19;
+            });
+            .pdf({
+              font-size: 12pt;
+              line-height: 1.1;
             });
         }
         .compact() {
@@ -128,6 +132,11 @@ h3, .h3 {
   #type > #size > .h3;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  //pdf styles only
+  page-break-after: avoid;
+}
+
 body, input, textarea, button {
     color: @c_grey_x-dark;
     #type > #font > .sans;
@@ -169,6 +178,7 @@ abbr {
     p, ol, ul, h4, h5, h6 {
         #type > #size > .regular;
     }
+
     >p:first-of-type {
         #type > #size > .large;
     }

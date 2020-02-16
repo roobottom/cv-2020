@@ -1,0 +1,15 @@
+@import '_reset';
+@import '_settings';
+@import '_typography';
+
+.pdf(@rule) {
+  @rule();
+};
+
+@page {
+  size: A4;
+  margin: 0;
+  border: 1cm solid @c_yellow;
+  padding: 2cm;
+}
+

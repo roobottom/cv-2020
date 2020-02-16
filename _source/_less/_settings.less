@@ -55,3 +55,21 @@
         --fontbase: @fontbase;
     }
 });
+
+.break-min(@rule) {
+  @media screen and (min-width: (@break-min-rem) ) {
+    @rule();
+  }
+}
+.break-mid(@rule) {
+  @media screen and (min-width: (@break-mid-rem) ) {
+    @rule();
+  }
+}
+.break-max(@rule) {
+  @media screen and (min-width: (@break-max-rem) ) {
+    @rule();
+  }
+}
+
+.pdf(@rule) {};
