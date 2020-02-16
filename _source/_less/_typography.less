@@ -1,37 +1,4 @@
 @font-face {
-    font-family: 'YoungSerif';
-    src: url('@{font_path}YoungSerif.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Orkney';
-    src: url('@{font_path}Orkney Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Orkney';
-    src: url('@{font_path}Orkney Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Orkney';
-    src: url('@{font_path}Orkney Regular Italic.woff2') format('woff2');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Orkney';
-    src: url('@{font_path}Orkney Bold Italic.woff2') format('woff2');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
     font-family: 'Fira Code';
     src: url('@{font_path}FiraCode.woff2') format('woff2');
     font-weight: normal;
@@ -50,12 +17,12 @@
     }
     #font {
         .serif() {
-            font-family: 'YoungSerif', serif;
+            font-family: 'Neuton', serif;
             font-weight: normal;
             font-style: normal;
         }
         .sans() {
-            font-family: 'Orkney', sans-serif;
+            font-family: 'Lato', sans-serif;
         }
     }
     #size {
@@ -103,8 +70,12 @@
                 line-height: 48 / 44;
             });
             .break-mid({
-                font-size: unit(62/@base, rem);
-                line-height: 66 / 62;
+                font-size: unit(82/@base, rem);
+                line-height: 86 / 82;
+            });
+            .break-max({
+                font-size: unit(128/@base, rem);
+                line-height: 132 / 128;
             });
         }
         .h2() {
@@ -145,6 +116,8 @@ h1, .h1 {
     #type > #font > .serif;
     #type > #size > .h1;
     letter-spacing: -0.1px;
+    font-weight: 800;
+    text-align: center;
 }
 
 h2, .h2 {
@@ -188,51 +161,6 @@ abbr {
   }
 }
 
-body {
-    counter-reset: section; 
-}
-
-.marker {
-    &, a { 
-        color: @c_grey_x-dark;
-        text-decoration: none;
-    }
-    a:after {
-        content: "#";
-        color: @c_grey_light;
-    }
-    a:hover:after {
-        color: @c_grey_med;
-    }
-    position: relative;
-    &--number:before {
-        counter-increment: section;
-        content: counter(section, lower-roman) + "."; 
-        #type > #font > .serif;
-        position: absolute;
-        width: unit(41/@base,rem);
-        height: unit(33/@base,rem);
-        font-size: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: url('@{img_path}splodge.svg') top left no-repeat;
-        background-size: contain;
-        top: unit( -43 / @base,rem);
-        left: 0;
-        text-shadow: 2px 0 0 white;
-
-        .break-max({
-            width: unit(61/@base,rem);
-            height: unit(53/@base,rem);
-            left: unit(-53/@base,rem);
-            top: unit(-15/@base,rem);
-            font-size: 100%;
-            z-index: -1;
-        });
-
-    }
-}
 
 //prose type styles
 .prose {
@@ -241,10 +169,8 @@ body {
     p, ol, ul, h4, h5, h6 {
         #type > #size > .regular;
     }
-    .lead,
-    &--lead p {
+    >p:first-of-type {
         #type > #size > .large;
-        color: @c_grey_dark;
     }
     time {
         #type > #size > .small;

@@ -1,0 +1,30 @@
+.container {
+  
+  display: grid;
+  grid-template-columns: 
+    [full-start] minmax(0, 2fr) 
+    [wide-start] minmax(0, 1fr)
+    [main-start] minmax(0, 42em) [main-end]
+    minmax(0, 1fr) [wide-end]
+    minmax(0, 2fr) [full-end];
+  grid-gap: 0;
+  padding: var(--gap);
+  border: var(--gap) solid @c_yellow;
+
+  >*,
+  >.layout--main  {
+    grid-column: main;
+  }
+
+  >.layout--wide,
+  >h1 {
+    grid-column: wide;
+  }
+
+
+  >blockquote,
+  >.layout--full {
+    grid-column: full;
+  }
+
+}

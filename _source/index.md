@@ -1,44 +1,65 @@
 ---
-title: Jon Roobottom's CV
 layout: article.njk
-----
-# Jon Roobottom's CV
+title: "Jon Roobottom's CV/Resume"
+---
+# Jon Roobottom
 
-## h2
+## Design thinking, developer know-how
 
-I'm a designer with 20 years experience of making online services and products.
-
-Born in the Black Country, I always wanted to follow my dad into a career in engineering. In fact, I studied electrical engineering at University. But a year in I discovered a love of design and switched my degree.
-
-Now living by the sea in Sussex, I have a foot in both worlds: I bring a no-nonsense approach to the design process; a ton of practical, hands-on expertise in building things for the web; and systems-thinking in everything I do.
+I'm a designer with 20 years experience of creating digital services, products and websites.
 
 ---
 
-### Information
+### Some basic information
 
-* Location: Near Brighton
+* Location: Littlehampton (near Brighton)
 * Education: 2:1 BSc Multimedia Technology from the University of Huddersfield in 2003
 * Website: [roodesign.co.uk](https://roodesign.co.uk)
 
 ---
 
-### Who I am
+### What I do
 
-> What's it like to work with me? I wrote this section to help answer that question.
+#### Design
 
-#### I'm a designer
+My main focus is user-centred design. I'm well practiced in UX/UI design for digital products. More recently, I've stepped into service design. I'm excited by using the power of design thinking to solve whole-business problems.
 
-I believe in a human-centred design approach. Testing an idea with real people by building low cost prototypes as early as possible. Fail fast and iterate quickly.
+What I'm trying to say:
 
-#### I'm a leader
+- I have a lot of experience in digital design
+- More recently I've been doing service design too
+- The tools and techniques of UX can be used to solve other business problems, not just digital 
+- I'm really interested in doing all this stuff. 
 
-I believe that the best solutions happen when teams work together. I seek to inspire collaborative problem solving whatever my role.
+#### Lead
 
-#### I'm a developer
+I'm interested in how designers work with others. I've built teams, designed processes and been a day-to-day manager. 
 
-I've been coding websites since 2001. I've led teams of developers and hand-built commercial websites and apps. Design is my first love but I'm also an adept web-developer with a deep understanding of how to build for the web.
+What I'm trying to say:
 
-#### I'm creative on purpose
+- I've built and led teams of designers in the past
+- I would like to do this again
+- I'm good at this as I have a wife understanding of what good design looks like (who you need, how they should work)
+
+#### Code
+
+I've been coding websites since 1998. Nowadays I use my coding skill as part of the design process. Whether it's creating a realistic prototype or building a design system, being able to code is immeasurably useful. 
+
+What I'm trying to say:
+
+- I've got loads of experience in coding for the web
+- This is mega helpful for design. Things like creating prototypes and design systems. 
+- I also do some front end coding for live sites and apps. 
+
+#### Create
+
+I believe that everyone is creative but most have forgotten how. By being deliberately creative, I help people rediscover their innate skill. I use a wide range of techniques to draw out the best—and often unexpected—ideas.
+
+What I'm trying to say:
+
+- Everyone is creative, but most have forgotten how
+- I used some techniques to help people have better ideas
+- This is often in workshops
 
 ---
 
@@ -48,15 +69,27 @@ I've been coding websites since 2001. I've led teams of developers and hand-buil
 
 ##### April 2019—April 2020
 
-I wo of a government digital team. 
+I worked as part HMRC's Payments, where I
 
-Here's some highlights:
+* Designed a new service for tracking VAT repayments
+* Designed and ran stakeholder workshops
+* Participated in research sessions
 
-* I designed a new service 
+* Service design
+* Interaction design
+* Prototype build and test
+* Workshop design and facilitation
+* Front-end development of live services
 
-#### Design consultant for Onalytica (contract)
+I wrote [a case study about a VAT repayment tracking service](#) I designed. 
+
+#### Design consultant for Onalytica
 
 ##### December 2018—February 2019
+
+* I helped Onalytica's design, product and development teams work more effectively together
+* I advised their senior leadership team on good design process
+* I built a front-end pattern library
 
 #### Head of Design at Firefly Learning
 
@@ -69,8 +102,9 @@ Here's some highlights:
 * I grew Firefly's design team from 1 (me) to 5
 * I defined Firefly's research and design process
 * I created Firefly's design system
-* I helped create the office design space
-* I designed and ran cross-team workshops
+* I 
+* I designed and ran cross-team and stakeholder workshops
+* I helped lead the whole company as part of Firefly's SLT
 
 You can read a [case study about leading design at Firefly](https://roodesign.co.uk/case-studies/firefly/).
 
@@ -84,16 +118,16 @@ Here's some of what I did:
 
 * Designed and built websites for schools
 * Designed apps for iPhone and iPad
-* Designed and built new features for Firefly on the web
-* Ran research sessions
-* Account managed website customers
+* Prototyped and built new features for Firefly on the web
+* Conducted research with teachers and students 
+* Gave presentations to school staff 
 
 
 #### Older roles
 
 Here's a summary of the rest of my career:
 
-* *2009—2011*, Designer/front-end developer at Onalytica
+* *2009—2011*, UX/front-end developer at Onalytica
 * *2007-2008*, Freelance web designer
 * *2006-2007*, UI designer at Glaxstar
 * *2004-2007*, Web designer at Key Web and Marketing
@@ -107,12 +141,22 @@ Here's a summary of the rest of my career:
 * Service design
 * UX design
 * UI design
+* Prototyping
+* Design systems 
 
-#### Creativity
+#### Leadership
 
 * Workshop design & facilitation
+* Design process planning
+* Design thinking methodology
+* Mentoring
+* Stakeholder management
 
-#### Front-end development
+#### Development
+
 * HTML & CSS
 * JavaScript
 * Vue.js
+* Node js 
+* SASS & Less
+* Git

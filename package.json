@@ -6,12 +6,17 @@
   "scripts": {
     "11ty": "npx @11ty/eleventy --serve",
     "gulp": "npx gulp",
-    "dev": "concurrently --kill-others \"npm run 11ty\" \"npm run gulp\""
+    "dev": "concurrently --kill-others \"npm run 11ty\" \"npm run gulp\"",
+    "build": "npx @11ty/eleventy && npx gulp build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "markdown-it": "^10.0.0",
+    "moment": "^2.24.0",
+    "prince": "^1.8.0",
+    "util": "^0.12.1"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
