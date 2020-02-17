@@ -4,19 +4,16 @@ title: "Jon Roobottom's CV/Resume"
 ---
 # Jon Roobottom
 
-## Design thinking, developer know-how
-
 I'm a designer with 20 years experience of creating digital services, products and websites.
 
----
-
-### Some basic information
+<div class="basic-info layout--wide">
 
 * Location: Littlehampton (near Brighton)
 * Education: 2:1 BSc Multimedia Technology from the University of Huddersfield in 2003
 * Website: [roodesign.co.uk](https://roodesign.co.uk)
 
----
+</div>
+
 
 ### What I do
 
@@ -74,7 +71,6 @@ I worked as part HMRC's Payments, where I
 * Designed a new service for tracking VAT repayments
 * Designed and ran stakeholder workshops
 * Participated in research sessions
-
 * Service design
 * Interaction design
 * Prototype build and test
@@ -99,12 +95,11 @@ Firefly switched focus from part-time web agency to full blooded product company
 
 Here's some highlights:
 
-* I grew Firefly's design team from 1 (me) to 5
-* I defined Firefly's research and design process
-* I created Firefly's design system
-* I 
-* I designed and ran cross-team and stakeholder workshops
-* I helped lead the whole company as part of Firefly's SLT
+- I grew Firefly's design team from 1 (me) to 5
+- I defined Firefly's research and design process
+- I created Firefly's design system
+- I designed and ran cross-team and stakeholder workshops
+- I helped lead the whole company as part of Firefly's SLT
 
 You can read a [case study about leading design at Firefly](https://roodesign.co.uk/case-studies/firefly/).
 
