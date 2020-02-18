@@ -3,13 +3,28 @@
 @import '_typography';
 @import '_components';
 
+//pdf layout
+.container {
+  
+}
+
+header, main {
+  width: 12cm;
+  margin-left: auto;
+}
+
+aside {
+  width: 6cm;
+  position: absolute;
+}
+
 .pdf(@rule) {
   @rule();
 };
 
 @page {
   size: A4;
-  margin: 2cm;
-  padding: 2cm;
+  margin: 1cm;
+  padding: 0;
 }
 

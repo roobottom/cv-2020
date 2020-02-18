@@ -1,6 +1,5 @@
 //global base
 @base: 16;
-@fontbase: 18;
 
 //layout sizing:
 @gap: 20;
@@ -45,15 +44,16 @@
 
 :root {
     --gap: unit(15/@base,rem);
-    --base: @base;
-    --fontbase: 15;
 }
 
 .break-min({
     :root {
         --gap: @gap-rem;
-        --fontbase: @fontbase;
     }
+    body {
+      font-size: 110%;
+    }
+    
 });
 
 .break-min(@rule) {

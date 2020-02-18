@@ -9,18 +9,13 @@ module.exports = function (config) {
     html: true
   }
   let md = markdownIt(mdOptions)
-
-
-
-  //custom markdown syntax
-  md.renderer.rules.image = function (tokens, idx, options, env, slf) {
-
-    var token = tokens[idx]
-    return '<div>Single div</div>'
-
-  }
-
   config.setLibrary("md", md)
+
+  config.addPairedShortcode("markdown", function(content) {
+    return md.render(content)
+  })
+
+
 
 
   //passthough
