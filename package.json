@@ -14,6 +14,8 @@
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
     "markdown-it": "^10.0.0",
+    "markdown-it-attrs": "^3.0.2",
+    "markdown-it-div": "^1.1.0",
     "moment": "^2.24.0",
     "prince": "^1.8.0",
     "util": "^0.12.1"

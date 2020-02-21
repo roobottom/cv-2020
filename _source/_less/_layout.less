@@ -18,20 +18,33 @@
   });
 
   
-  header {
+  .header {
     grid-column: header;
   }
 
-  aside {
-    grid-column: sidebar;
-    .break-min({
-      text-align: right;
-    })
-  }
-
-  main {
+  >* {
     grid-column: content;
   }
+  h3 {
+    grid-column: sidebar;
+  }
+  .break-min({
+    >h3 {
+      text-align: right;
+    }
+  });
+
+  .boxouts,
+  hr.full {
+    grid-column: sidebar / content;
+  }
 
 
+}
+
+.boxouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-column-gap: @gap-rem;
+  margin: (@gap-rem * 3) 0;
 }
