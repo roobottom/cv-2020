@@ -2,20 +2,21 @@
 title: "Jon Roobottom's CV"
 layout: article.njk
 ---
-# **JON** ROOBOTTOM
+{# markdown content #}
+{% set intro %}
+{% markdown %}
+I've been using design to improve online experiences since my 56K dial-up modem was cutting-edge.
 
-UX Designer with 16 years experience of creating digital services, products and websites.
+Nowadays, I work at the crossroads of creativity, design and technology. Most recently I've been designing services on GOV.UK.
 
-* [roodesign.co.uk](https://roodesign.co.uk)
-* 07766 256899
-* [roo@roodesign.co.uk](mailto:roo@roodesign.co.uk)
-{.info}
+Before that, I built and led a design team. I love working with others and drawing-out ideas through deliberate creativity techniques.
 
----{.full}
+I'm also an adept front-end developer. I'm just at home building click-through prototypes as production code.
+{% endmarkdown %}
+{% endset %}
 
-## Experience
-
-
+{% set job_hmrc %}
+{% markdown %}
 ### Interaction Designer at HMRC (contract)
 
 April 2019—Present, Durrington-on-sea {.date}
@@ -26,6 +27,45 @@ April 2019—Present, Durrington-on-sea {.date}
 * Design and facilitation of workshops. 
 * Developing production front-end code.
 {.bullets}
+{% endmarkdown %}
+{% endset %}
+
+{# render page #}
+<header>
+  <div class="grid">
+    <p class="myname">Jon Roobottom</p>
+    <h1>UX designer with 16 years’ experience of creating digital services and websites.</h1>
+    <div class="lead">
+      {{ intro | safe }}
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="grid">
+    <nav aria-label="Navigate CV sections">
+      <ul>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Contact me</a></li>
+      </ul>
+    </nav>
+
+    <section class="timeline">
+      <h2 id="experience" class="timeline-heading">Experience</h2>
+      <div class="timeline-item">
+        {{ job_hmrc | safe }}
+      </div> 
+    </section>
+
+  </div>
+</main>
+
+## Experience
+
+
+
 
 ---
 
