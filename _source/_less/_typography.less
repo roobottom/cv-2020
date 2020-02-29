@@ -117,14 +117,36 @@
   }
   #style {
       .link() {
-          color: @c_blue;
-          text-decoration: underline;
+        color: @c_blue;
+        text-decoration: underline;
+        &:visited {
+          color: @c_purple;
+        }
+        &:visited:focus,
+        &:visited:active {
+          color: @c_grey_dark;
+        }
+        &:focus {
+          color: @c_grey_x-dark;
+          background-color: @c_yellow;
+          box-shadow: 0 -2px @c_yellow, 0 4px @c_grey_x-dark;
+          text-decoration: none;
+        }
+        &:active {
+          color: @c_grey_x-dark;
+        }
+        &:hover {
+          color: darken(@c_blue, 20%);
+        }
+        &:visited:hover {
+          color: darken(@c_purple, 20%);
+        }
+        
       }
   }
 }
 
 
-//global type styles
 //global type styles
 h1, .h1 {
   #type > #font > .serif;
@@ -138,6 +160,11 @@ h2, .h2 {
 
 h3, .h3 {
 #type > #size > .h3;
+}
+h4, .h4 {
+  #type > #size > .large;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
 }
 
 body, input, textarea, button {
@@ -166,9 +193,8 @@ p, ol, ul, h4, h5, h6 {
   #type > #size > .regular;
 }
 .lead,
-&--lead p {
+.lead p {
   #type > #size > .large;
-  color: @c_grey_dark;
 }
 time {
   #type > #size > .small;
@@ -181,34 +207,43 @@ max-width: 100%;
 display: block;
 }
 
->ol>li,
->ul>li {
-  margin-left: 1em;
-}
-
-//spacing
-.break-max({
-  >ol>li,
-  >ul>li {
-      padding-left: unit(8/@base,rem);
-      //margin-left: unit(-8/@base,rem);
-  }
-});
+//virtical rhythm 
 li + li {
   margin-top: unit(2/@base,rem);
 }
-p, ol, ul, h2, h3, h4, h5, h6, time {
-  margin-bottom: unit(@gap/@base,rem);
+p, ol, ul, h2, h4, h5, h6, time {
+  margin-bottom: @gap-rem;
+}
+h3 {
+  margin-bottom: @gap-rem / 2;
 }
 p+h2, ul+h2, ol+h2,
 p+h3, ul+h3, ol+h3 {
-  margin-top: unit(@gap*2/@base,rem);
-  margin-top: calc(var(--gap) * 2);
+  margin-top: @gap-rem * 2;
 }
 figure {
-margin-bottom: unit(@gap*2/@base,rem);
-margin-bottom: calc(var(--gap) * 2);
+  margin-bottom: @gap-rem/2;
 }
+//type helpers
+.margin-top-half {
+  margin-top: @gap-rem / 2;
+}
+.margin-top-single {
+  margin-top: @gap-rem;
+}
+.margin-top-double {
+  margin-top: @gap-rem * 2;
+}
+.margin-bottom-half {
+  margin-bottom: @gap-rem / 2;
+}
+.margin-bottom-single {
+  margin-bottom: @gap-rem;
+}
+.margin-bottom-double {
+  margin-bottom: @gap-rem * 2;
+}
+
 
 
 
@@ -280,18 +315,4 @@ mark {
   border-radius: 1em 0;
   padding: 0 .35em;
   margin: 0 -.35em;
-}
-
-//typographic modifiers
-.lead {
-  margin-top: 1em;
-  > p {
-    #type > #size > .large;  
-  }
-}
-
-.myname {
-  #type > #size > .large;
-  font-variant-caps: all-small-caps;
-  font-weight: bold;
 }

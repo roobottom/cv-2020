@@ -23,10 +23,12 @@
   }
 
 
-
+header, main {
+  padding: @gap-rem * 2;
+}
 
 header {
-  padding: @gap-rem * 2;
+  
   .break-mid({
     min-height: calc(100vh - (@gap-rem * 4));
   });
@@ -55,12 +57,9 @@ header {
     mix-blend-mode: overlay;
   }
 
-  p {
-    color: @c_grey_x-dark;
-  }
-
   p:last-child {
     margin-bottom: 0;
   }
   
 }
+
