@@ -1,5 +1,4 @@
-#layout {
-  .grid() {
+.grid {
     
     display: grid;
     grid-column-gap: @gap-rem * 3;
@@ -8,11 +7,24 @@
     .break-mid({
       grid-template-columns: repeat(3, minmax(0, 18rem));
       grid-template-areas:
-        "sidebar content aside"
+        "alpha beta gamma"
     });
 
+    &-two-thirds-start,
+    >* { //default layout
+      grid-column: alpha / beta
+    }
+    &-full {
+      grid-column: alpha / gamma;
+    }
+    &-one-third-end {
+      grid-column: gamma;
+    }
+
   }
-}
+
+
+
 
 header {
   min-height: 100vh;
@@ -29,22 +41,8 @@ header {
     mix-blend-mode: overlay;
   }
 
-  .grid {
-    > * {
-      grid-column: sidebar / content;
-    }
-
-    .myname,
-    h1 {
-      grid-column: sidebar / aside;
-    }
-
-    
-
+  p {
+    color: @c_grey_x-dark;
   }
   
-}
-
-.grid {
-  #layout > .grid;
 }
