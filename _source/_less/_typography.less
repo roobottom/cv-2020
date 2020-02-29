@@ -53,7 +53,7 @@
       .regular() {
           font-size: unit(16/@base,rem);
           line-height: 24 / 16;
-          .break-min({
+          .break-mid({
               font-size: unit(19/@base,rem);
               line-height: 34 / 19;
           });
@@ -61,7 +61,7 @@
       .compact() {
         font-size: unit(16/@base,rem);
         line-height: 20 / 16;
-        .break-min({
+        .break-mid({
             font-size: unit(19/@base,rem);
             line-height: 23 / 19;
         });
@@ -73,7 +73,7 @@
       .large() {
           font-size: unit(19/@base,rem);
           line-height: 26 / 19;
-          .break-min({
+          .break-mid({
               font-size: unit(24/@base,rem);
               line-height: 32 / 24;
           });
@@ -81,7 +81,7 @@
       .x-large() {
           font-size: unit(23/@base,rem);
           line-height: 27 / 23;
-          .break-min({
+          .break-mid({
               font-size: unit(32/@base,rem);
               line-height: 40 / 32;
           });
@@ -89,7 +89,7 @@
       .h1() {
           font-size: unit(32/@base, rem);
           line-height: 38 / 32;
-          .break-min({
+          .break-mid({
               font-size: unit(44/@base, rem);
               line-height: 48 / 44;
           });
@@ -101,7 +101,7 @@
       .h2() {
           font-size: unit(26/@base,rem);
           line-height: 30 / 26;
-          .break-min({
+          .break-mid({
               font-size: unit(34/@base,rem);
               line-height: 38 / 34;
           });
@@ -109,7 +109,7 @@
       .h3() {
           font-size: unit(20/@base,rem);
           line-height: 24 / 20;
-          .break-min({
+          .break-mid({
               font-size: unit(24/@base,rem);
               line-height: 28 / 24;
           });
@@ -221,9 +221,12 @@ h3, h4, h5, h6 {
 }
 
 //lists {
-ul li {list-style-image: url('@{img_path}bullet.svg');}
-ul li li {list-style-image: url('@{img_path}bullet-level-2.svg');}
-ul li li li {list-style: square;}
+ul.bullets {
+  li {list-style-image: url('@{img_path}bullet.svg');}
+  li li {list-style-image: url('@{img_path}bullet-level-2.svg');}
+  li li li {list-style: square;}
+  li { margin-left: 1em; }
+}
 
 ol li li {list-style-type: lower-alpha;}
 ol li li li {list-style-type: lower-roman;}
@@ -279,10 +282,16 @@ mark {
   margin: 0 -.35em;
 }
 
-//forced styling
+//typographic modifiers
 .lead {
+  margin-top: 1em;
   > p {
-    #type > #size > .large;
-    margin-top: 1em;
+    #type > #size > .large;  
   }
+}
+
+.myname {
+  #type > #size > .large;
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
 }
