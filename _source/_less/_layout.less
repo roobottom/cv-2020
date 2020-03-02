@@ -1,9 +1,10 @@
 .grid {
     
-    .break-mid({
+    .break-max({
       display: grid;
       grid-column-gap: @gap-rem * 3;
       justify-content: center;
+      align-content: start;
       grid-template-columns: repeat(3, minmax(0, 18rem));
       grid-template-areas:
         "alpha beta gamma"
@@ -18,6 +19,9 @@
     }
     &-one-third-end {
       grid-column: gamma;
+    }
+    &-reverse {
+      grid-row: 1;
     }
 
   }
@@ -47,13 +51,12 @@ header {
   }
 
   &:before {
-    background-color: @c_yellow_light;
-    background: linear-gradient(@c_yellow_light, darken(@c_yellow_light, 5%));
+    background-color: @c_yellow;
   }
   
   &:after {
     background: url('/assets/images/pattern-zigzags.png') top left repeat;
-    opacity: .5;
+    opacity: .2;
     mix-blend-mode: overlay;
   }
 
@@ -63,3 +66,9 @@ header {
   
 }
 
+.flex {
+  display: flex;
+  >nav {
+    order: 1;
+  }
+}

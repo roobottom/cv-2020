@@ -5,19 +5,19 @@ layout: article.njk
 {# markdown content #}
 {% set intro %}
 {% markdown %}
-I’ve been using designing online experiences since my 56K dial-up modem was cutting-edge.
+I've been designing online experiences since my 56K dial-up modem was cutting-edge.
 
-Nowadays, I work at the crossroads of creativity, design and technology. Most recently I’ve been designing services on GOV.UK.
+Nowadays, I work at the crossroads of creativity, design and technology. Most recently I've been designing services on GOV.UK.
 
 Before that, I built and led a design team. I love working with others and drawing-out ideas through deliberate creativity techniques.
 
-I’m also an adept front-end developer. I’m just at home building click-through prototypes as I am writing production code.
+I'm also an adept front-end developer. I'm just at home building click-through prototypes as I am writing production code.
 {% endmarkdown %}
 {% endset %}
 
 {% set role_hmrc %}
 {% markdown %}
-### Interaction Designer at HMRC (contract)
+### Interaction Designer at HMRC (contract) {.margin-bottom-quarter}
 
 April 2019—Present, Durrington-on-sea {.date}
 
@@ -118,54 +118,54 @@ September 2011—September 2014, London {.date}
 {% endmarkdown %}
 {% endset %}
 
+{% set contact %}
+{% markdown %}
+* Location: Littlehampton (near Brighton)
+* Phone: 07766 256899
+* Email: [roo@roodesign.co.uk](mailto:roo@roodesign.co.uk)
+* Website: [roodesign.co.uk](https://roodesign.co.uk)
+{% endmarkdown %}
+{% endset %}
+
 {# render page #}
-<header>
-  <div class="grid">
-    <p class="grid-full h4 margin-bottom-half">Jon Roobottom's CV</p>
-    <h1 class="grid-full margin-bottom-double">UX designer with 16 years’ experience of creating digital services and websites.</h1>
-    <div class="lead">
-      {{ intro | safe }}
-    </div>
+<header class="grid">
+  <p class="grid-full h4 margin-bottom-half">Jon Roobottom's CV</p>
+  <h1 class="grid-full margin-bottom-double">UX designer with 16 years’ experience of creating digital services and websites.</h1>
+  <div class="lead">
+    {{ intro | safe }}
   </div>
 </header>
 
-<main>
-  <div class="grid">
-    <nav aria-label="Navigate CV sections">
-      <ul>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#">Education</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Contact me</a></li>
-      </ul>
-    </nav>
+<main class="grid">
+  <section class="timeline">
+    <h2 id="experience" class="timeline-heading">Experience</h2>
+    <article class="timeline-item">
+      {{ role_hmrc | safe }}
+    </article>
+    <article class="timeline-item">
+      {{ role_onalytica | safe }}
+    </article>
+    <article class="timeline-item">
+      {{ role_firefly_headofdesign | safe }}
+    </article> 
+    <article class="timeline-item">
+      {{ role_firefly_designer | safe }}
+    </article>
+    <article class="timeline-item">
+      {{ role_history | safe }}
+    </article> 
+    <h2 id="education" class="timeline-heading">Education</h2>
+    <article class="timeline-item">
+      <p>2:1 BSc (HONS) Multimedia Technology from the University of Huddersfield in 2003</p>
+    </article>
+    <h2 id="skills" class="timeline-heading">Skills</h2>
+    <article class="timeline-item">
+      {{ skills | safe }}
+    </article> 
+    <h2 id="contact" class="timeline-heading">Contact me</h2>
+    <article class="timeline-item">
+      {{ contact | safe }}
+    </article> 
+  </section>
 
-    <section class="timeline">
-      <h2 id="experience" class="timeline-heading">Experience</h2>
-      <div class="timeline-item">
-        {{ role_hmrc | safe }}
-      </div>
-      <div class="timeline-item">
-        {{ role_onalytica | safe }}
-      </div>
-      <div class="timeline-item">
-        {{ role_firefly_headofdesign | safe }}
-      </div> 
-      <div class="timeline-item">
-        {{ role_firefly_designer | safe }}
-      </div>
-      <div class="timeline-item">
-        {{ role_history | safe }}
-      </div> 
-      <h2 id="education" class="timeline-heading">Education</h2>
-      <div class="timeline-item">
-        <p>2:1 BSc (HONS) Multimedia Technology from the University of Huddersfield in 2003</p>
-      </div>
-      <h2 id="skills" class="timeline-heading">Skills</h2>
-      <div class="timeline-item">
-        {{ skills | safe }}
-      </div> 
-    </section>
-
-  </div>
 </main>
