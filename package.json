@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "11ty": "npx @11ty/eleventy --serve",
-    "gulp": "npx gulp",
-    "dev": "concurrently --kill-others \"npm run 11ty\" \"npm run gulp\"",
-    "build": "npx @11ty/eleventy && npx gulp build"
+    "dev": "npx gulp",
+    "build": "npx gulp build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "child_process": "^1.0.2",
     "markdown-it": "^10.0.0",
     "markdown-it-attrs": "^3.0.2",
     "markdown-it-div": "^1.1.0",
