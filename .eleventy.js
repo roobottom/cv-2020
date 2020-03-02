@@ -23,6 +23,7 @@ module.exports = function (config) {
 
   //passthough
   config.addPassthroughCopy("_source/assets")
+  config.addPassthroughCopy("_source/CNAME")
 
 
   return {
