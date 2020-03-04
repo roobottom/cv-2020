@@ -1,30 +1,70 @@
 @import '_reset';
 @import '_settings';
-@import '_typography';
-@import '_components';
+
+@font-face {
+  font-family: 'YoungSerif';
+  src: url('@{font_path}YoungSerif.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Orkney';
+  src: url('@{font_path}Orkney Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orkney';
+  src: url('@{font_path}Orkney Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orkney';
+  src: url('@{font_path}Orkney Regular Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Orkney';
+  src: url('@{font_path}Orkney Bold Italic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
 
 //pdf layout
-.container {
-  
-}
-
 header, main {
-  width: 12cm;
-  margin-left: auto;
+  width: 14cm;
+  margin: 0 auto;
 }
-
-aside {
-  width: 6cm;
-  position: absolute;
-}
-
-.pdf(@rule) {
-  @rule();
-};
 
 @page {
   size: A4;
-  margin: 1cm;
-  padding: 0;
+  margin: 0;
+  padding: 1cm;
 }
 
+body {
+  font-family: 'Orkney';
+}
+
+h1 {
+  font-family: 'YoungSerif';
+  font-size: 16pt;
+
+}
+p, ul, ol {
+  font-size: 9pt;
+  line-height: 12/9;
+  margin-bottom: 9pt;
+}
+
+h2, h3, h4, h5 {
+  page-break-after: avoid;
+  line-height: 1.1;
+  margin-bottom: 9pt;
+}
+
+//special styles

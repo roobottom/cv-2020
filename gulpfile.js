@@ -11,7 +11,7 @@ const css = () => {
 }
 
 const eleventyLocal = (callback) => {
-  cp.spawn("npx", ["eleventy", '--serve'], { stdio: "inherit" })
+  return cp.spawn("npx", ["eleventy", '--serve'], { stdio: "inherit" })
   callback()
 }
 const eleventy = (callback) => {
@@ -34,10 +34,10 @@ const pdf = (callback) => {
 }
 
 exports.default = function(callback) {
-  console.log('watching')
+  eleventyLocal()
   watch(['./_site/index.html', './_source/_less/**/*.less'], 
     { ignoreInitial: false }, 
-    series(eleventyLocal, css, pdf))
+    series(css, pdf))
   callback()
 }
 exports.build = series(eleventy, css, pdf)
