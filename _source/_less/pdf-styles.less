@@ -36,35 +36,79 @@
 
 //pdf layout
 header, main {
-  width: 14cm;
+  width: 13cm;
   margin: 0 auto;
 }
 
 @page {
   size: A4;
-  margin: 0;
-  padding: 1cm;
+  @bottom-center {
+    font-size: 9pt;
+    color: @c_grey_dark;
+    content: counter(page) " / " counter(pages);
+    font-family: 'Orkney';
+  }
 }
 
 body {
   font-family: 'Orkney';
 }
 
-h1 {
+h1, .h1 {
   font-family: 'YoungSerif';
-  font-size: 16pt;
-
+  font-size: 18pt;
+  line-height: 1.05;
+  margin-bottom: 9pt;
+}
+h2, .h2 {font-size: 14pt;}
+h3, .h3 {font-size: 12pt;}
+h4, .h4 {
+  font-size: 11pt;
+  text-transform: lowercase;
+  font-variant: small-caps;
 }
 p, ul, ol {
   font-size: 9pt;
   line-height: 12/9;
-  margin-bottom: 9pt;
+  margin: 0 0 9pt 0;
+}
+li + li {
+  margin-top: 1pt;
+}
+ul.bullets {
+  margin-left: .5cm;
+  li {
+    list-style: disc;
+  }
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5,
+.h2, .h3, .h4, .h5 {
   page-break-after: avoid;
   line-height: 1.1;
   margin-bottom: 9pt;
+  font-weight: bold;
 }
 
-//special styles
+//spacing modifiers
+.margin-bottom-quarter { margin-bottom: 9pt / 4; }
+.margin-bottom-half { margin-bottom: 9pt / 2; }
+.lead {margin-bottom: 9pt * 4;}
+.sc {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+//timeline
+.timeline {
+  padding-left: .5cm;
+  width: calc(100% - .5cm);
+  border-left: 3px solid @c_grey_light;
+  margin-bottom: 9pt * 3;
+
+  &-item {
+    page-break-inside: avoid;
+    margin-bottom: 9pt * 3;
+  }
+}
+
