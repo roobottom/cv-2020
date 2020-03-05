@@ -5,11 +5,11 @@ layout: article.njk
 {# markdown content #}
 {% set intro %}
 {% markdown %}
-I've been designing engaging online experiences since my <span class="sc">28K</span> dial-up modem was a cutting-edge piece of kit. Nowadays, I work at the crossroads of creativity, design and technology. 
+I've been designing engaging online experiences since my 28K dial-up modem was a cutting-edge piece of kit. Nowadays, I work at the crossroads of creativity, design and technology. 
 
 Most recently I've been designing services on <span class="sc">GOV.UK</span>. Before that, I built and led a design team. 
 
-I'm also a skilled front-end developer. I'm at home building prototypes or writing production code.   
+I'm also a skilled front-end developer; equally at home building prototypes as I am production code.
 {% endmarkdown %}
 {% endset %}
 
@@ -17,13 +17,16 @@ I'm also a skilled front-end developer. I'm at home building prototypes or writi
 {% markdown %}
 ### Interaction Designer at HMRC (contract) {.margin-bottom-quarter}
 
-April 2019—Present, Durrington-on-sea {.date}
+April 2019—April 2020, Worthing {.date}
 
-* Working alongside a researcher and content designer to design services on GOV.UK. 
-* Creating service maps and blueprints. 
-* Prototyping for testing using the GDS prototyping kit. 
-* Design and facilitation of workshops. 
-* Developing production front-end code.
+I was delighted to work with HMRC digital. Alongside a scrum team, I designed several services for taxpayers.
+
+* Created service maps and blueprints.
+* Participated in research with HMRC staff and end-users.
+* Produced HTML prototypes.
+* Designed and facilitated creativity workshops. 
+* Developed production front-end code.
+* Built a deep understanding of GDS processes and tools.
 {.bullets}
 {% endmarkdown %}
 {% endset %}
@@ -43,7 +46,7 @@ Onalytica helps companies understand who is talking about them online. I worked 
 * Designed and built a front-end pattern library
 {.bullets}
 
-Read [case study](https://roodesign.co.uk/case-studies/onalytica/).
+Read my [case study about the work I did with Onalytica](https://roodesign.co.uk/case-studies/onalytica/).
 {% endmarkdown %}
 {% endset %}
 
@@ -53,14 +56,17 @@ Read [case study](https://roodesign.co.uk/case-studies/onalytica/).
 
 September 2014—October 2018, London {.date}
 
+Firefly took an investment of £4.5M to grow its R&D capability. I was asked to become Firefly's Head of Design and scale-up the product design capability of the company.
+
+* Redefined Firefly's user-research and design process
+* Put into place new tooling and design methodologies
 * Grew Firefly's design team from 1 to 5
-* Defining Firefly's research and design process
-* Creation of a design system
-* Designed and ran cross-team and stakeholder workshops
-* Member of Firefly's SLT
+* Built a hiring and retention process for designers
+* Helped grow Firefly from ~200 to over 500 schools as a member of Firefly's SLT
+* Helped maintain 97% customer satisfaction rating
 {.bullets}
 
-Read [case study](https://roodesign.co.uk/case-studies/firefly/)
+Read my [case study about leading Firefly's design team](https://roodesign.co.uk/case-studies/firefly/)
 {% endmarkdown %}
 {% endset %}
 
@@ -129,9 +135,17 @@ September 2011—September 2014, London {.date}
 {% endmarkdown %}
 {% endset %}
 
+{% set aboutCV %}
+{% markdown %}
+You can [download the latest PDF version of this CV](https://cv.roobottom.com/jon-roobottom-cv.pdf).
+
+Each time I make an update an new PDF version is built automatically. You can [view the source code](https://github.com/roobottom/cv-2020) if you'd like.
+{% endmarkdown %}
+{% endset %}
+
 {# render page #}
 <header class="grid">
-  <p class="grid-full h4 margin-bottom-half">Jon Roobottom's CV</p>
+  <p class="grid-full h4 margin-bottom-half"><a href="https://cv.roobottom.com">Jon Roobottom's CV</a></p>
   <h1 class="grid-full margin-bottom-double">UX designer with 16 years’ experience of creating digital services and websites.</h1>
   <div class="lead">
     {{ intro | safe }}
@@ -174,6 +188,10 @@ September 2011—September 2014, London {.date}
     <article class="timeline-item">
       {{ contact | safe }}
     </article> 
+  </section>
+
+  <section class="teaser grid-full">
+    {{ aboutCV | safe }}
   </section>
 
 </main>
