@@ -3,6 +3,7 @@ const less = require('gulp-less')
 const prince = require('prince')
 const util = require('util')
 const cp = require('child_process')
+const babel = require('gulp-babel')
 
 const css = () => {
   return src(['./_source/_less/styles.less', './_source/_less/pdf-styles.less'])
@@ -33,11 +34,19 @@ const pdf = (callback) => {
   callback()
 }
 
+const js = (callback) => {
+  return src('./_source/app.js')
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
+  .pipe(dest('./_site'))
+}
+
 exports.default = function(callback) {
   eleventyLocal()
-  watch(['./_site/index.html', './_source/_less/**/*.less'], 
+  watch(['./_site/index.html', './_source/_less/**/*.less', './_source/app.js'], 
     { ignoreInitial: false }, 
-    series(css, pdf))
+    series(css, js, pdf))
   callback()
 }
-exports.build = series(eleventy, css, pdf)
+exports.build = series(eleventy, js, css, pdf)

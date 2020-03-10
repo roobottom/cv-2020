@@ -31,43 +31,6 @@ header, main {
   padding: @gap-rem * 2;
 }
 
-header {
-  
-  .break-mid({
-    min-height: calc(100vh - (@gap-rem * 4));
-  });
-  
-  position: relative;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  &:before {
-    background-color: @c_yellow;
-  }
-  
-  &:after {
-    background: url('/assets/images/pattern-zigzags.png') top left repeat;
-    opacity: .2;
-    mix-blend-mode: overlay;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-
-  //teaser
-  
-  
-}
 
 .flex {
   display: flex;
