@@ -5,30 +5,47 @@ layout: article.njk
 {# markdown content #}
 {% set intro %}
 {% markdown %}
-I've been designing engaging online experiences since my 28K dial-up modem was a cutting-edge piece of kit. Nowadays, I work at the crossroads of creativity, design and technology. 
+I’ve been designing engaging online experiences since my 28K dial-up modem was a cutting-edge piece of kit. Nowadays, I help organisations build great products, manage happy teams and have potent ideas.
 
-Most recently I've been designing services for HMRC. Before that, I built and led a design team. 
+Recently I’ve been designing services for the UK government. Before that, I built and led a design team.
 
 I'm also a skilled front-end developer; equally at home building prototypes as I am production code.
 {% endmarkdown %}
 {% endset %}
 
+{% set role_ho %}
+{% markdown %}
+### Interaction designer, Home Office (contract) {.margin-bottom-quarter}
+
+from April 2021 {.date}
+
+Alongside a mixed discipline team, I design services for Home Office staff.
+
+* Sketch and HTML prototypes
+* Design and facilitation of workshops
+* Working with GDS processes and GOV.UK design system
+* Taking part in user research sessions 
+* Contributing to the HO design system
+{.bullets}
+{% endmarkdown %}
+{% endset %}
+
 {% set role_hmrc %}
 {% markdown %}
-### Interaction designer & front-end developer at HMRC (contract) {.margin-bottom-quarter}
+### UX developer at HMRC (contract) {.margin-bottom-quarter}
 
-from April 2019, Worthing {.date}
+April 2019 to April 2021 {.date}
 
-Alongside a scrum team, I design and build services for taxpayers. Day-to-day, I:
+Alongside a scrum team, I designed and built services for taxpayers.
 
-* produce Sketch and HTML prototypes;
-* design and facilitating workshops;
-* develop production front-end code;
-* work with GDS processes and GOV.UK design system;
-* contribute to the HMRC design system;
-* create service maps and blueprints;
-* take part in research sessions;
-* ensure everything I design and code is accessible.
+* I produced Sketch and HTML prototypes
+* Undertook service-level research
+* Designed and facilitated workshops
+* Developed production front-end code
+* Worked with GDS processes and GOV.UK design system
+* Contributed to the HMRC design system
+* Created service maps and blueprints
+* Took part in user research sessions
 {.bullets}
 
 Read a [case study about a service I designed for HMRC](https://roodesign.co.uk/work/vat-repayment-tracker/)
@@ -149,8 +166,8 @@ Each time I make an update, a new PDF version is built automatically. You can [v
 
 {# render page #}
 <header class="grid">
-  <p class="grid-full h4 margin-bottom-half"><a href="https://cv.roobottom.com">Jon Roobottom's CV</a></p>
-  <h1 class="grid-full margin-bottom-double">UX designer with 17 years experience of creating digital services and websites.</h1>
+  <p class="grid-full h4 margin-bottom-half"><a href="https://cv.roobottom.com">Jon Roobottom:</a></p>
+  <h1 class="grid-full margin-bottom-double">A designer with two decades of experience in creating digital products and services</h1>
   <div class="lead">
     {{ intro | safe }}
   </div>
@@ -159,6 +176,9 @@ Each time I make an update, a new PDF version is built automatically. You can [v
 <main class="grid">
   <h2 id="experience" class="timeline-heading">Experience</h2>
   <section class="timeline">
+    <article class="timeline-item">
+      {{ role_ho | safe }}
+    </article>
     <article class="timeline-item">
       {{ role_hmrc | safe }}
     </article>
